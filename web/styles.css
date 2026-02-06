@@ -1,0 +1,223 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0a0d14;
+  color: #e7e9ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 18px 18px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #111828;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.topbar p {
+  margin: 4px 0 0;
+  color: #98a1b3;
+}
+
+.seed-panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.seed-panel input {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #2b364e;
+  background: #0f1625;
+  color: #e7e9ee;
+}
+
+.seed-panel button {
+  background: #2d6dff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 16px;
+  flex: 1;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #2b364e;
+  background: #0b0f1b;
+}
+
+.hint {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: #9aa4b8;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.panel {
+  padding: 12px;
+  border-radius: 12px;
+  background: #111828;
+  border: 1px solid #202b42;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  background: #1c253a;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+
+.inventory {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.slot {
+  background: #0f1625;
+  border: 1px solid #2b364e;
+  border-radius: 8px;
+  padding: 6px;
+  font-size: 12px;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.crafting {
+  display: grid;
+  gap: 6px;
+}
+
+.recipe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f1625;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #25314b;
+  font-size: 12px;
+}
+
+.recipe button {
+  background: #2d6dff;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.furnace {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.furnace button {
+  background: #f97316;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer button {
+  background: #1f2937;
+  border: 1px solid #334155;
+  color: #e5e7eb;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.status {
+  color: #9aa4b8;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

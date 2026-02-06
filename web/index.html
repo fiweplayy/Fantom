@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voxelis: HTML Sandbox</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Voxelis</h1>
+      <p>HTML‑версия воксельной sandbox/survival игры.</p>
+    </div>
+    <div class="seed-panel">
+      <label for="seedInput">Seed</label>
+      <input id="seedInput" type="text" placeholder="Например: 1987" />
+      <button id="regenBtn">Перегенерировать мир</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="game">
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Игровой мир"></canvas>
+      <div class="hint">
+        <span>ЛКМ: добыча</span>
+        <span>ПКМ: установка</span>
+        <span>1–6: хотбар</span>
+        <span>Shift: бег</span>
+        <span>F: вид от 3-го лица</span>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <section class="panel">
+        <h2>Статы</h2>
+        <div class="stat">
+          <span>Здоровье</span>
+          <div class="bar"><div id="healthBar" class="fill"></div></div>
+        </div>
+        <div class="stat">
+          <span>Голод</span>
+          <div class="bar"><div id="hungerBar" class="fill"></div></div>
+        </div>
+        <div class="stat">
+          <span>Выносливость</span>
+          <div class="bar"><div id="staminaBar" class="fill"></div></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Инвентарь</h2>
+        <div id="inventory" class="inventory"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Крафт</h2>
+        <div id="crafting" class="crafting"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Печь</h2>
+        <div class="furnace">
+          <div>Вход: <span id="furnaceInput">-</span></div>
+          <div>Топливо: <span id="furnaceFuel">-</span></div>
+          <div>Выход: <span id="furnaceOutput">-</span></div>
+          <button id="smeltBtn">Переплавить</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Настройки</h2>
+        <label class="toggle">
+          <input id="weatherToggle" type="checkbox" />
+          <span>Дождь</span>
+        </label>
+        <label class="toggle">
+          <input id="fogToggle" type="checkbox" />
+          <span>Туман</span>
+        </label>
+        <label class="toggle">
+          <input id="saveToggle" type="checkbox" checked />
+          <span>Автосохранение</span>
+        </label>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <button id="saveBtn">Сохранить мир</button>
+    <button id="loadBtn">Загрузить мир</button>
+    <span id="status" class="status">Готово</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
