@@ -14,7 +14,7 @@ var multimesh_instance: MultiMeshInstance3D
 func _ready() -> void:
     multimesh_instance = MultiMeshInstance3D.new()
     multimesh_instance.multimesh = MultiMesh.new()
-    multimesh_instance.multimesh.mesh = CubeMesh.new()
+    multimesh_instance.multimesh.mesh = BoxMesh.new()
     add_child(multimesh_instance)
 
 func initialize(coord: Vector3i, data: Array) -> void:
