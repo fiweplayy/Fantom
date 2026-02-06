@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlockCraft Lite</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="menu" class="overlay">
+      <div class="panel">
+        <h1>BlockCraft Lite</h1>
+        <div class="menu-actions">
+          <button id="newGame">Новая игра</button>
+          <button id="loadGame">Загрузить мир</button>
+          <button id="openSettings">Настройки</button>
+        </div>
+        <div id="settings" class="settings hidden">
+          <h2>Настройки</h2>
+          <label>
+            Чувствительность мыши
+            <input id="sensitivity" type="range" min="0.2" max="2" step="0.1" value="1" />
+          </label>
+          <label>
+            Громкость
+            <input id="volume" type="range" min="0" max="100" step="5" value="80" />
+          </label>
+        </div>
+        <p class="hint">WASD — движение, Space — прыжок, мышь — обзор, 1-3 — выбор предмета.</p>
+      </div>
+    </div>
+
+    <div id="hud" class="hud hidden">
+      <div class="inventory">
+        <button class="slot active" data-block="dirt">1<br /><span>Земля</span></button>
+        <button class="slot" data-block="wood">2<br /><span>Дерево</span></button>
+        <button class="slot" data-block="stone">3<br /><span>Камень</span></button>
+      </div>
+      <div class="status">
+        <span id="worldStatus">Мир: новый</span>
+        <button id="saveWorld">Сохранить</button>
+        <button id="exitWorld">В меню</button>
+      </div>
+    </div>
+
+    <canvas id="game"></canvas>
+
+    <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
