@@ -1,4 +1,4 @@
-const THREE = window.THREE;
+import * as THREE from 'https://unpkg.com/three@0.158.0/build/three.module.js';
 
 const canvas = document.querySelector('#game');
 const menu = document.querySelector('#menu');
